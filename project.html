@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .buttons button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .buttons button:hover {
+            transform: scale(1.1);
+        }
+
+        .animation-container {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            margin-top: 30px;
+        }
+
+        .circle {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #FF6347;
+            border-radius: 50%;
+            animation: moveCircle 4s ease-in-out infinite;
+        }
+
+        @keyframes moveCircle {
+            0% {
+                top: 0;
+                left: 0;
+            }
+            25% {
+                top: 0;
+                left: 90%;
+            }
+            50% {
+                top: 90%;
+                left: 90%;
+            }
+            75% {
+                top: 90%;
+                left: 0;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to My Project!</h1>
+        <p class="message">I hope you're having a great day. Choose a button to interact!</p>
+
+        <div class="buttons">
+            <button id="btn1">Show Love 💖</button>
+            <button id="btn2">Say Hello 👋</button>
+        </div>
+
+        <div class="animation-container">
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("btn1").addEventListener("click", function() {
+            document.querySelector(".message").textContent = "You are amazing! 💖 Keep shining!";
+            document.querySelector(".message").style.color = "green";
+        });
+
+        document.getElementById("btn2").addEventListener("click", function() {
+            document.querySelector(".message").textContent = "Hello, friend! 👋 Hope you're doing well!";
+            document.querySelector(".message").style.color = "blue";
+        });
+    </script>
+
+</body>
+</html>
